@@ -1,5 +1,9 @@
 # RESTFUL API 
 
+@route /api/v1/calc/
+@desc this the an endpoint used by users to create new accounts
+@access public
+
 @route /api/v1/auth/register
 @desc this the an endpoint used by users to create new accounts
 @access public
