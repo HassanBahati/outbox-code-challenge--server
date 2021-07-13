@@ -13,7 +13,7 @@ exports.getCalculations = async (req, res, next) => {
 exports.addOneCalc = async (req, res) => {
   const calc = new Calculation({
     challenge: req.body.challenge,
-    result: req.body.result,
+    result: req.body.result
   });
   try {
     const savedCalc = await calc.save();

@@ -7,11 +7,11 @@ const CalculationSchema = new mongoose.Schema({
   //   },
   challenge: {
     type: Number,
-    required: [true, "Please provide a number to compute"],
+   
   },
   result: {
     type: Number,
-    required: [true],
+ 
   },
 });
 
