@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const connectDB = async () => {
-  await mongoose.connect(process.env.MONGO_URI, {
+  await mongoose.connect("mongodb+srv://bahati:bahati@safe-courier.e9cwq.mongodb.net/safe-courier", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
