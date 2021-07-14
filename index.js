@@ -12,6 +12,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
+app.get('/', (req,res)=>{res.send('Server is booming online')})
+
 app.use("/api/v1/auth", require("./routes/auth"));
 app.use("/api/v1/private", require("./routes/private"));
 app.use("/api/v1/calc", require("./routes/Calculation"));
