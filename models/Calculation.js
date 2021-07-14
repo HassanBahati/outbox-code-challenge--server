@@ -5,6 +5,9 @@ const CalculationSchema = new mongoose.Schema({
   //     type: String,
   //     required: [true, "Please provide a username"],
   //   },
+  type: {
+    type: String
+  },
   challenge: {
     type: Number,
    
