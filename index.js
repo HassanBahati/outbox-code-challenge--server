@@ -2,6 +2,18 @@ require("dotenv").config({ path: "./.env" });
 const express = require("express");
 const connectDB = require("./config/db");
 const errorHandler = require('./middleware/error')
+const cors = require('cors');
+
+app.use(express.json());
+app.use(cors());
+//for cross origin resource sharing 
+app.use(function(req, res, next) {
+        res.header("Access-Control-Allow-Origin", "*") //update to match detail you make requests from
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+        res.header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS");
+        res.header('Access-Control-Allow-Credentials', true);
+        next();
+    });
 
 //conect db
 connectDB()
@@ -9,8 +21,6 @@ connectDB()
 const app = express();
 
 const PORT = process.env.PORT || 5000;
-
-app.use(express.json());
 
 app.get('/', (req,res)=>{res.send('Server is booming online')})
 
