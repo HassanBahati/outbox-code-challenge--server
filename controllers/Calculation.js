@@ -12,6 +12,7 @@ exports.getCalculations = async (req, res, next) => {
 //post submits an calculation
 exports.addOneCalc = async (req, res) => {
   const calc = new Calculation({
+    type: req.body.type,
     challenge: req.body.challenge,
     result: req.body.result
   });
